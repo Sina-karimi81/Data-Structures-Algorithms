@@ -43,3 +43,14 @@ Called O of 2 ^ N (Exponential Complexity), is the opposite of logarithmic growt
 to make understand what 2 ^ N means, think of a set of N switches, each switche can be on or off, so the total subsets of this set is 2 ^ N. the computer science example would be recursion algorithms
 ## Growth Chart
 ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/c7a91e75-813b-4a00-ac35-bee6d8472ee7)
+
+## Arrays
+
+* Simplest data structure
+* Saves data in a sequential order
+* in dynamic languages like python it's size is dynamic and can shrink or enlarge as needed but in java it is static so it's size wont shrink or enlarge
+* java provide two dynamic implementation: Vector and ArrayList
+* in ArrayList the size grows by 50% and in Vector it grows 100%
+* Vectors are synchronized but ArrayLists are not which makes them more suitable for multi threaded applications
+* they are mostly used when you know how many items you are going to have ahead of time
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/ff0e3d12-a62a-4054-acf8-64e78c94518b)<br />
