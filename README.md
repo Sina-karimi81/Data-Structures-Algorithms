@@ -47,10 +47,27 @@ to make understand what 2 ^ N means, think of a set of N switches, each switche 
 ## Arrays
 
 * Simplest data structure
+* Data is stored at contiguous memory locations
 * Saves data in a sequential order
 * in dynamic languages like python it's size is dynamic and can shrink or enlarge as needed but in java it is static so it's size wont shrink or enlarge
-* java provide two dynamic implementation: Vector and ArrayList
+* java provides two dynamic implementation: Vector and ArrayList
 * in ArrayList the size grows by 50% and in Vector it grows 100%
 * Vectors are synchronized but ArrayLists are not which makes them more suitable for multi threaded applications
 * they are mostly used when you know how many items you are going to have ahead of time
 ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/ff0e3d12-a62a-4054-acf8-64e78c94518b)<br />
+
+## LinkedList
+
+* Second most used Data Structure
+* data is stored sequentially but they are not at contiguous memory locations and are distrubted across memory and each element (Also Called a Node) has a pointer to the next
+* because of this, LinkedList can grow or shrink without having to copy the prevoius data (Automatically) but because of the pointer to other Nnodes each node consumes a bit more memory
+* because memory is easily allocated and deallocated at runtime insertion and deletions are relatively easier to arrays and data need not be shifted
+* the First and the Last Node are called Head and Tail repectively
+* it is the backbone of some advanced Data Structures such as Stack, Queue, Graph, Hashmap, etc
+* to access an element the whole list must be traversed hence no random access (using index to get the element) and harder data manipulation
+* Searching for a specific value in a linked list involves traversing the list from the head node until the value is found or the end of the list is reached.
+* there are three kinds of LinkedList: 1- Singly LinkedList 2- Doubly LinkedList 3- Circular LinkedList
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/0af9c22a-9604-46af-a408-72a71f78b41c)<br />
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/0975e761-6f2d-4c0e-b4de-4cae22a3396f)<br />
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/e65f767b-9c58-4b2b-90e7-9fab2a2b1e0c)<br />
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/64de7fdc-e6e7-4918-aba7-304f85c6478b)<br />
