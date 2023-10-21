@@ -78,4 +78,4 @@ to make understand what 2 ^ N means, think of a set of N switches, each switche 
 * Can be Implemented using ArrayList or LinkedList
 * mostly used in situations where we need to undo or do things in reversed order
 * stacks have four primary operations: 1- push() (used to insert a value) 2- pop() (used to return a value and delete it from the stack) 3- peek() (used to see the top element, doesn't remove anyrhing) 4- isEmpty() which all run in O(1) because we only work with the last element that was inserted
-* ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/8521b79b-7907-4704-bc49-4cd42fdf902b)<br />
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/8521b79b-7907-4704-bc49-4cd42fdf902b)<br />
