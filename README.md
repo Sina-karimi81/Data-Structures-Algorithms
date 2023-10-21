@@ -71,3 +71,11 @@ to make understand what 2 ^ N means, think of a set of N switches, each switche 
 ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/0975e761-6f2d-4c0e-b4de-4cae22a3396f)<br />
 ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/e65f767b-9c58-4b2b-90e7-9fab2a2b1e0c)<br />
 ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/64de7fdc-e6e7-4918-aba7-304f85c6478b)<br />
+
+## Stack
+
+* A Data Strucutre that follows LIFO (Last in First out) which mean the last element (aka top) that is inserted is the first element that comes out
+* Can be Implemented using ArrayList or LinkedList
+* mostly used in situations where we need to undo or do things in reversed order
+* stacks have four primary operations: 1- push() (used to insert a value) 2- pop() (used to return a value and delete it from the stack) 3- peek() (used to see the top element, doesn't remove anyrhing) 4- isEmpty() which all run in O(1) because we only work with the last element that was inserted
+* ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/8521b79b-7907-4704-bc49-4cd42fdf902b)<br />
