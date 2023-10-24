@@ -1,5 +1,6 @@
 # Data-Structures-Algorithms
 This is a Repo made to hold a summary of the course from Mosh named: The Ultimate Data Structures And Algorithms.<br />
+be sure the check out his courses at: https://codewithmosh.com/ <br />
 the course is divided in 3 parts:<br />
 1. Linear
 2. non-linear
@@ -79,3 +80,14 @@ to make understand what 2 ^ N means, think of a set of N switches, each switche 
 * mostly used in situations where we need to undo or do things in reversed order
 * stacks have four primary operations: 1- push() (used to insert a value) 2- pop() (used to return a value and delete it from the stack) 3- peek() (used to see the top element, doesn't remove anyrhing) 4- isEmpty() which all run in O(1) because we only work with the last element that was inserted
 ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/8521b79b-7907-4704-bc49-4cd42fdf902b)<br />
+
+## Queue
+
+* A Data Structure that follows FIFO (First In First Out) which means the first element that is inserted is the frist elements that comes out
+* Queues are literally the same thing that they represent in real life: An Actual queue
+* they are mostly used in situations were a resource must be shared and used among many consumers and consumers should use the resource one by one
+* this makes tools such as Kafka , sophisticated queues
+* most used implementations of Queues in java are ArrayDeque , LinkedList (yes they can be used is queues too) and PriorityQueue
+* there is catch with PriorityQueues: they don't follow FIFO instead they sort the data within them is ASC or DESC order depending on what the user needs and their priority (it is implied that the data type assigned should be Comparable)
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/1301932d-11ae-4f0c-bd07-1f8078c9bd0e)<br />
+* as a side note it is worth mentioning that PriorityQueues that are implemented using an array have enqueue of O(n) becasue of the shifting that occurres upon reaching array limit and the queue that i implemented usinn a stack in this section also had O(n) for both the enqueue beacuse data had to be transfered from one stack to the other to be in correct order
