@@ -45,7 +45,9 @@ to make understand what 2 ^ N means, think of a set of N switches, each switche 
 ## Growth Chart
 ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/c7a91e75-813b-4a00-ac35-bee6d8472ee7)
 
-## Arrays
+## Linear Data Structures
+
+### Arrays
 
 * Simplest data structure
 * Data is stored at contiguous memory locations
@@ -57,7 +59,7 @@ to make understand what 2 ^ N means, think of a set of N switches, each switche 
 * they are mostly used when you know how many items you are going to have ahead of time
 ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/ff0e3d12-a62a-4054-acf8-64e78c94518b)<br />
 
-## LinkedList
+### LinkedList
 
 * Second most used Data Structure
 * data is stored sequentially but they are not at contiguous memory locations and are distrubted across memory and each element (Also Called a Node) has a pointer to the next
@@ -73,21 +75,40 @@ to make understand what 2 ^ N means, think of a set of N switches, each switche 
 ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/e65f767b-9c58-4b2b-90e7-9fab2a2b1e0c)<br />
 ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/64de7fdc-e6e7-4918-aba7-304f85c6478b)<br />
 
-## Stack
+### Stack
 
-* A Data Strucutre that follows LIFO (Last in First out) which mean the last element (aka top) that is inserted is the first element that comes out
+* A Data Strucutre that follows LIFO (Last in First out) which mean the last element (aka top) that is inserted is the first element that comes out<br />
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/8521b79b-7907-4704-bc49-4cd42fdf902b)<br />
 * Can be Implemented using ArrayList or LinkedList
 * mostly used in situations where we need to undo or do things in reversed order
 * stacks have four primary operations: 1- push() (used to insert a value) 2- pop() (used to return a value and delete it from the stack) 3- peek() (used to see the top element, doesn't remove anyrhing) 4- isEmpty() which all run in O(1) because we only work with the last element that was inserted<br />
-![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/8521b79b-7907-4704-bc49-4cd42fdf902b)<br />
 
-## Queue
+### Queue
 
 * A Data Structure that follows FIFO (First In First Out) which means the first element that is inserted is the frist elements that comes out
-* Queues are literally the same thing that they represent in real life: An Actual queue
+* Queues are literally the same thing that they represent in real life: An Actual queue<br />
+![queues](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/d9960b2c-c697-420a-bacf-d44ffe31293b)<br />
 * they are mostly used in situations were a resource must be shared and used among many consumers and consumers should use the resource one by one
 * this makes tools such as Kafka , sophisticated queues
 * most used implementations of Queues in java are ArrayDeque , LinkedList (yes they can be used is queues too) and PriorityQueue
 * there is catch with PriorityQueues: they don't follow FIFO instead they sort the data within them is ASC or DESC order depending on what the user needs and their priority (it is implied that the data type assigned should be Comparable)<br />
 ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/1301932d-11ae-4f0c-bd07-1f8078c9bd0e)<br />
 * as a side note it is worth mentioning that PriorityQueues that are implemented using an array have enqueue of O(n) becasue of the shifting that occurres upon reaching array limit and the queue that I implemented using a stack in this section also had O(n) for both the dequeue adn peek operations beacuse data had to be transfered from one stack to the other to be in correct order
+
+### Map And Set
+* Maps are data structures that store data as key value pairs, they use arrays in the background, most used implementations are HashMap and LinkedHashMap (explain the difference later)
+* HashTable is another implementation that is similar to HashMap but is cinsidered legacy and is not used much anymore
+* so they are mostly used to create spellcheckers, dictionaries, compilers and code editors
+* when we insert a key value pair, values can be duplicates but keys must be unique
+* Sets are maps that only work with the key hence they are used to store values that are unique and don't allow duplicates and any duplicate value in them is removed, most used impelementation is HashSet
+* Maps used HashFunctions on keys to generate a hashCode to be used as a pointer to the memory that is storing the value of that specific key, hence they are deterministic meaning that they create the same hashCode for the same key
+* but there are situations where two different keys generate the same hashCode that is when a collision occurres, so two pairs point to the same memory location
+* there are two solutions to collisions
+  - Chaining: we store a LinkedList in each cell of the array and if to keys point to the same cell (memory location) e add them to the LinkedList
+  - Open Addressing: we store the key/value pairs directly into the array and when a second key points to a cell that is already occupied, we probe or look for the next empty cell. There 3 probing strategies
+      1. Linear Probing: where we find the next (adjacent) empty cell by using the formula: (hashFucntion + i) % array_size. can clear clusters of data and cause poor performance when inserting or lookingUps
+      2. Quadratic Probing: we make big jumps to avoid creating clusters but may end up in infinite loops with formula: (hashFunction + i^2) % array_size
+      3. Double Hashing: we use a second hash to calculate the step needed with formula: (hashFunction1 + i*hashFunction2) % array_size
+* out of the mentioned collision handlers mostly the chaining solution is used
+* now you may wonder how can we get a value if the key points the a list, that's is where the equals() method comes in. if the key points to cell that has a LinkedList, e iterate over the list and choose a pair that maches the input key using equals method
+* in maps the main operations which are add , remove and get usually work in O(1) but can scale to O(n) due to chaining
