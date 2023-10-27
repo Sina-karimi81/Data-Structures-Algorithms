@@ -112,4 +112,4 @@ to make understand what 2 ^ N means, think of a set of N switches, each switche 
 * out of the mentioned collision handlers mostly the chaining solution is used
 * now you may wonder how can we get a value if the key points the a list, that's is where the equals() method comes in. if the key points to cell that has a LinkedList, e iterate over the list and choose a pair that maches the input key using equals method
 * in maps the main operations which are add , remove and get usually work in O(1) but can scale to O(n) due to chaining
-* because we it is not clear what index the hashFunction creates, HashMaps don't save data in the sequence that they were inserted, so if we want to save data according to their insertion order we use LinkedHashMap
+* because it is not clear what index the hashFunction creates, HashMaps don't save data in the sequence that they were inserted, so if we want to save data according to their insertion order we use LinkedHashMap
