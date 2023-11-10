@@ -113,3 +113,37 @@ to make understand what 2 ^ N means, think of a set of N switches, each switche 
 * now you may wonder how can we get a value if the key points the a list, that's is where the equals() method comes in. if the key points to cell that has a LinkedList, we iterate over the list and choose a pair that maches the input key using equals method
 * in maps the main operations which are add , remove and get usually work in O(1) but can scale to O(n) due to chaining
 * because it is not clear what index the hashFunction creates, HashMaps don't save data in the sequence that they were inserted, so if we want to save data according to their insertion order we use LinkedHashMap
+
+## Non Linear Data Structures
+
+### Tree
+
+* trees are data strucutres that store data in a hierarchy. data are stored as nodes and the lines that connect them are called edges <br />
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/aeef5d4f-d6ed-402b-a669-60a40c4a5f24)<br />
+* the top node is called a root. each node can be a parent and have children. for example the root node is a parent and has two childs. a node that doesn't have a child is called a leaf node
+* in this example our tree is called a Binary Tree since each node has at most two childs. we have many types of trees but they are all fundamentally the same so in this section we focus on binary tree
+* trees have many application:
+    1. when we want to repressent a hierarchal data such as a family tree or files on a disk
+    2. in databases where trees are used for indexing
+    3. autocompletion, for example when you search something in google it tries to match it to your previous searches
+    4. compilers where they used something called the syntax tree to parse expressions
+    5. trees are also used in compression algorithms such as JPEG and MP3
+* we have a special kind of binary tree called Binary Search Tree (BST) where the value of each node is greater than it's left child and is less than it's right child
+* the intersting fact about BST is that every node the left subTree a given node is less than it and every node in it's right subTree is greater than it <br />
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/b9e6187e-3679-4707-b4e5-5ef193b430b0) <br />
+* the look up in BST is really fast since we only examine part of the tree not all of it, for example if we are lokking for number 1 in our tree, since 1 is smaller than 7 we go to search the left sub tree and ignore the right. the same thing happens until we find the value we are lookig for. this gives us a lookup time of O(logN) since we disregard half the tree
+* the same thing happens for insertion of new node where we examine if it is smaller or greater than our current node. so we get insertion of O(logN)
+* the same thing happens for deletion and we get O(logN) since we have to lookup for the value and then reconnect the remaining nodes
+* ofcourse all of this depends on wether our tree is structured correctly or not
+* we have two kinds of traversal in trees:
+    1. Breadth First (aka level order): we visit every node that is on the same level after going to the next level. in our example it would be: [7, 4, 9, 1, 6, 8, 10] 
+    2. Depth First:
+       - Pre Order: we visit the Root then the left sub tree then the right sub tree e.g: [7, 4, 1, 6, 9, 8, 10]
+       - In Order: we visit the left sub tree then the root and then the right sub tree e.g: [1, 4, 6, 7, 8, 9, 10] , prints the nodes in ascending order. do the reverse to get descending
+       - Post Order: we visit the left sub tree then the right sub tree and finally the root e.g: [1, 6, 4, 8, 10, 9, 7] , we traverse the tree from the leaf node to the root
+* recursion is powerful technique to implement repetition where we call the same function on a subset of it's input, basically breaking a problem into smaller problems. the important point in recursion is that we should have a base condition where a simple value is returned and the function is not called anymore or else it will run forever.
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/00c7ed9d-4567-4ec0-a13f-90fb8fe253e8)<br />
+* in java a stack is used to keep track of recursion!!!
+* we use recursion to implement various methods of tree manipulation be it traversal , validation an so on.....
+* depth of a node is when we start from the root node and count the edges we take to reach our target node where as height starts from a leaf node and goes to our target root
+* the height of a tree is the longest path from the leaves to root: 1 + MAX(height(left) , height(right)). the same goes for the depth of a tree where the longest route from root to a leaf is depth of the tree
