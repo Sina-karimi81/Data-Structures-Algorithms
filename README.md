@@ -1,4 +1,4 @@
-# Data-Structures-Algorithms
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/ebc2f5a3-c781-461c-a21b-dcdd5da3cb34)# Data-Structures-Algorithms
 This is a Repo made to hold a summary of the course from Mosh named: The Ultimate Data Structures And Algorithms.<br />
 be sure the check out his courses at: https://codewithmosh.com/ <br />
 the course is divided in 3 parts:<br />
@@ -147,3 +147,53 @@ to make understand what 2 ^ N means, think of a set of N switches, each switche 
 * we use recursion to implement various methods of tree manipulation be it traversal , validation an so on.....
 * depth of a node is when we start from the root node and count the edges we take to reach our target node where as height starts from a leaf node and goes to our target root
 * the height of a tree is the longest path from the leaves to root: 1 + MAX(height(left) , height(right)). the same goes for the depth of a tree where the longest route from root to a leaf is depth of the tree
+
+### AVL Tree
+
+* AVL tree which is also known as self balancing tree is a type of tree that evaluates itself after every insert or deletion, if the difference of the height of node in it's left and right subtrees is greater than 1 then it balances itself
+* a perfect tree is a tree in which every level (except the last level) is full of nodes. 
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/938dcc94-f128-478f-a843-9e4e82e753ef)
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/d262a204-da52-4439-9f32-9d39aac964ab)
+* consider a tree with nodes of 10 , 20 , 30. this would be a right skewed tree (or it is was reversed -> 30 , 20 , 10 it would be left skewed). doing operation on this kind of tree would result in O(N) because our tree has basically become a LinkedList and in order to traverse it we have to iterate through each node
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/3e95cea1-0ef9-4a9f-9d94-ecdc17c8f94c)
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/e38e0b42-8250-4bc0-a586-8597cde4fbb9)
+* in order to balance itself this kind of tree uses operations called rotation which depending on what side of the tree is heavy (i.e has greater height)
+* Left Rotation: we set the right child of the root as the new root and the old root as the left child of new root
+  - before :<br />
+   ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/3b40f3b6-7ee8-47a1-9815-45dd2785b856)
+  - after :<br />
+   ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/af1962e8-57e6-4578-a3b5-a990251aaec7)
+* right Rotation: we set the left child of the root as the new root and the old root as the right child of new root
+  - before :<br />
+   ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/0dd16e5e-dd0e-497a-8160-8d53403a7b6f)
+  - after :<br />
+   ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/a25bd0a0-199d-4a00-8bb3-378063ac2cd6)
+* left-right Rotation: when there is an imbalance in the left child right subtree, we perform a left rotation on the left child of root and then a right rotation on the root
+  - before :<br />
+   ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/880b841f-4c73-4419-883b-76a43be2efa6)
+  - after :<br />
+   ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/3fbae723-c4d4-4377-bf54-2aef91ce323f)
+  - after after:<br />
+   ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/36c72103-1807-41bd-b943-fbbeb5686b33)
+ * right-left Rotation: when there is an imbalance in the right child left subtree, we perform a right rotation on the right child of root and then a left rotation on the root
+  - before :<br />
+   ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/22c6db8e-00d9-43ee-9cfe-a949080209fc)
+  - after :<br />
+   ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/67a3b86d-fbda-4f27-adbe-d9c6d813903e)
+  - after after:<br />
+   ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/64d18488-89fc-456c-8e57-53c1457a428e)
+* in the example below we can that there is an imbalance
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/0876b9d8-7b13-42d7-aa27-683cfb0b8026)
+* since it is a left skewed subtree we detach the right child of node 15 and perform a right rotation on the root
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/f810a6e5-1b9e-4051-9a56-28da574e7fc5)
+* then we decide where to put the detached node which in this case is the left child of 18
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/2ef02d3b-a1a1-44dc-8fb1-d1d474bcda88)
+* we have another example below
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/4742327d-bf0e-4de8-be15-39630ce2aa3b)
+* we perform a left-right rotation on 10, so we left rotate 7
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/eb807b3b-b3b8-49d3-bda3-1e79e83e0cf1)
+* then we perform a right rotation on 10 to get the result below
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/b5220a2e-cd13-495b-a058-68730e4abb09)
+
+
+
