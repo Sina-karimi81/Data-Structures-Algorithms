@@ -1,4 +1,4 @@
-![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/ebc2f5a3-c781-461c-a21b-dcdd5da3cb34)# Data-Structures-Algorithms
+# Data-Structures-Algorithms
 This is a Repo made to hold a summary of the course from Mosh named: The Ultimate Data Structures And Algorithms.<br />
 be sure the check out his courses at: https://codewithmosh.com/ <br />
 the course is divided in 3 parts:<br />
