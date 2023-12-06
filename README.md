@@ -222,3 +222,5 @@ to make understand what 2 ^ N means, think of a set of N switches, each switche 
 ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/6854184e-f83f-47fa-86ca-dd3872a99de9)<br />
 ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/7ef0d310-b8f6-4ab0-8ab6-f490790c3176)<br />
 * in these operations the largest a value can travle is the height of the tree and as we know from before height = log(n) so the time complexity of these operations is O(logn)
+* HeapSort: by inserting an array of numbers in a heap and then removing the elements of the heap one by one and store the result in an array, the result would be the original array in DESC order. this is for a MaxHeap, for ASC order we need a MinHeap. in my example I stored the removed values in the same array and by changing the iteration direction i managed to sort both in DESC and ASC
+* Heapify algorithm: transforming an array to a heap in place
