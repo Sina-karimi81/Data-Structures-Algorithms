@@ -195,5 +195,30 @@ to make understand what 2 ^ N means, think of a set of N switches, each switche 
 * then we perform a right rotation on 10 to get the result below
 ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/b5220a2e-cd13-495b-a058-68730e4abb09)
 
-
-
+### Heaps
+* heaps are a special type of binary tree that has two properties:
+    - they are complete trees: every level must be completely filled except the last level that can have empty nodes and levels are filled from left to right
+    - Complete:
+    - ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/bebd067e-8894-4e76-b78e-154ae4360e19)
+    - not complete:
+    - ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/0b60a8eb-7839-429e-b036-b2bb2e6ce989)
+    - heap propert: states taht every node must be equal or greater that their children
+    - with heap property
+    - ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/453a6ddd-9d5a-42a5-b6dc-fad814bb6f6e)
+    - without heap property
+    - ![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/a1a77653-2a68-433e-96fe-e17e85933a45)
+* we have MaxHeap where the root node has the largest value and as we go down the values get smaller and a MinHeap where the root node has the lowest value and as we go down the values get larger
+* heaps are used in:
+    - Sorting; we have a HeapSort
+    - Graph algorithms: for example the shortest path algorithms
+    - implementing priority queues
+    - finding the Kth smallest/largest value
+* whenever we add a new value to the tree we add it as a leaf and then check if it is bigger than it's parent, if it is we swap their places and keep doing this until it is at the right spot this called bubblingUp operation
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/d19db7a5-7c18-4037-9d91-3a888932d248)<br />
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/19740fac-cc5d-4377-a4f8-579ad4084ed3)<br />
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/6f685c15-54a5-4990-9f49-a89516761089)<br />
+* whenever we remove a value, we always remove the root value and the replace it with the last node and then check if it is smaller than it's children, if it is we swap it's place with the larger child and keep doing this until it is at the right spot this called bubblingDown operation
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/6f685c15-54a5-4990-9f49-a89516761089)<br />
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/6854184e-f83f-47fa-86ca-dd3872a99de9)<br />
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/7ef0d310-b8f6-4ab0-8ab6-f490790c3176)<br />
+* in these operations the largest a value can travle is the height of the tree and as we know from before height = log(n) so the time complexity of these operations is O(logn)
