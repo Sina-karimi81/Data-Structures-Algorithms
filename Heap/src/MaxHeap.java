@@ -1,5 +1,7 @@
 public class MaxHeap {
     public static void heapify(int[] array) {
+        // since mathematically half of the nodes are the ;eaf nodes and we do the heapify operation to make sure the parents are greater than the children
+        // we iterate for the half of the array
         var lastParentIndex = array.length / 2 - 1;
 
         for (int i = lastParentIndex; i >= 0; i--) {
