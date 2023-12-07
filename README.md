@@ -224,3 +224,13 @@ to make understand what 2 ^ N means, think of a set of N switches, each switche 
 * in these operations the largest a value can travle is the height of the tree and as we know from before height = log(n) so the time complexity of these operations is O(logn)
 * HeapSort: by inserting an array of numbers in a heap and then removing the elements of the heap one by one and store the result in an array, the result would be the original array in DESC order. this is for a MaxHeap, for ASC order we need a MinHeap. in my example I stored the removed values in the same array and by changing the iteration direction i managed to sort both in DESC and ASC
 * Heapify algorithm: transforming an array to a heap in place
+
+### Trie
+
+* Tries (which is an acronym for retrieval tree) (aka digital , radix , prefix) are a type of tree structure which not binary and is mostly used in implmentation autocompletion algorithms
+* being non binary enalbes this tree to be able to store many combinations of words, and since we are using trees we are going to have proficient memory storage
+![image](https://github.com/Sina-karimi81/Data-Structures-Algorithms/assets/83176938/78d0cad6-2aa4-406b-bb8e-b809a5a89c89)
+*  as you can see we have stored the word bag , boy and cat in this trie. boy and bag share the same prefix that is **b** so we don't have any duplication of prefixes. the number of children a node can have is dependent on the language of choice forexample in engish a node can have 26 children
+*  as rule the root node always has a null or empty charater value since a word or a phrase can start with any word and we cannot have 26 roots!
+*  the lookup (noded must be traversed) , insert (existing nodes are traversed and new ones are added to them as a child) and remove (nodes must be traversed to be deleted) operations fot this structure is O(L) where L is the length of the given word and technically it is O of constant
+*  the trie can be traversed in both post order and pre order fashion
